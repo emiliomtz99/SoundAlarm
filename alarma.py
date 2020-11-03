@@ -7,11 +7,12 @@ import time
 starttime = time.time()
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('haboots-86f0b-firebase-adminsdk-kxjz1-771d99108a.json')
+cred = credentials.Certificate('downloadThisFileFrom.json') 
+# https://console.firebase.google.com/u/0/project/PROYECT NAME/settings/serviceaccounts/adminsdk -> Generate new private key
 
 # Initialize the app with a custom auth variable, limiting the server's access
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://haboots-86f0b.firebaseio.com',    
+    'databaseURL': 'https://firebaseName.firebaseio.com',    
 })
 
 # The app only has access as defined in the Security Rules
